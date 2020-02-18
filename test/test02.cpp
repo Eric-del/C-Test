@@ -11,7 +11,9 @@ public:
 	~CMyString();
 	CMyString& operator =(const CMyString& str);//第一个引用可以进行连续赋值，第二个引用防止连续调用赋值构造函数，影响程序执行效率
 };
-
+//
+//C++规范重载=运算符
+//
 //初级
 CMyString& CMyString::operator =(const CMyString& str)
 {
