@@ -7,12 +7,12 @@ private:
 	char* m_pData;
 public:
 	CMyString(char* pData = nullptr);
-	CMyString(const CMyString& str);//必须使用常量引用传参
+	CMyString(const CMyString& str);//蹇呴』浣跨敤甯搁噺寮曠敤浼犲弬
 	~CMyString();
-	CMyString& operator =(const CMyString& str);//第一个引用可以进行连续赋值，第二个引用防止连续调用赋值构造函数，影响程序执行效率
+	CMyString& operator =(const CMyString& str);//绗竴涓紩鐢ㄥ彲浠ヨ繘琛岃繛缁祴鍊硷紝绗簩涓紩鐢ㄩ槻姝㈣繛缁皟鐢ㄨ祴鍊兼瀯閫犲嚱鏁帮紝褰卞搷绋嬪簭鎵ц鏁堢巼
 };
 
-//初级
+//鍒濈骇
 CMyString& CMyString::operator =(const CMyString& str)
 {
 	if (this == &str)
@@ -26,7 +26,7 @@ CMyString& CMyString::operator =(const CMyString& str)
 	return *this;
 }
 
-//高级
+//楂樼骇
 CMyString& CMyString::operator =(const CMyString& str)
 {
 	if (this != &str)
@@ -38,4 +38,3 @@ CMyString& CMyString::operator =(const CMyString& str)
 	}
 	return *this;
 }
-
